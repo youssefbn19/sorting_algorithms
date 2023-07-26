@@ -67,7 +67,7 @@ void quickSort(int *array, int l_index, int h_index, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (size < 2)
+	if (!array || size < 2)
 		return;
 	quickSort(array, 0, size - 1, size);
 }
