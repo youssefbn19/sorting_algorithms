@@ -27,4 +27,8 @@ void quick_sort(int *array, size_t size);
 int partition(int *array, int l_index, int h_index, size_t size);
 void quickSort(int *array, int l_index, int h_index, size_t size);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void node_swapper(listint_t **list, listint_t **current, listint_t **cmp);
+bool backward_sort(listint_t **list, listint_t **current, listint_t **cmp);
+bool forward_sort(listint_t **list, listint_t **current, listint_t **cmp);
 #endif
