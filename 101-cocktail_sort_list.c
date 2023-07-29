@@ -35,7 +35,7 @@ bool forward_sort(listint_t **list, listint_t **current, listint_t **cmp)
 {
 	bool swapped = false;
 
-	while ((*cmp)->next)
+	while (*cmp)
 	{
 		if ((*current)->n > (*cmp)->n)
 		{
