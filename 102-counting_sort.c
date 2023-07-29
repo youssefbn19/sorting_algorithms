@@ -9,6 +9,7 @@
 int *dynamic_array(size_t size)
 {
 	int *new_array = NULL;
+	size_t i;
 
 	new_array = malloc(sizeof(int) * size);
 
@@ -18,7 +19,7 @@ int *dynamic_array(size_t size)
 		exit(1);
 	}
 
-	for (size_t i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 		new_array[i] = 0;
 
 	return (new_array);
@@ -33,7 +34,8 @@ int *dynamic_array(size_t size)
  */
 void counting_sort(int *array, size_t size)
 {
-	size_t k, i;
+	int k, j;
+	size_t i;
 	int *key_array = NULL, *sort_array = NULL;
 
 	if (!array || size < 2)
@@ -48,8 +50,8 @@ void counting_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 		key_array[array[i]]++;
-	for (i = 1; i <= k; i++)
-		key_array[i] += key_array[i - 1];
+	for (j = 1; j <= k; j++)
+		key_array[j] += key_array[j - 1];
 
 	print_array(key_array, k + 1);
 
